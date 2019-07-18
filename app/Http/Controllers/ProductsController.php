@@ -15,7 +15,7 @@ class ProductsController extends Controller
 		return view('products.index',['products' => $products]);
 	}
 	
-	public function importView()
+	public function importform()
     {
        return view('import');
     }

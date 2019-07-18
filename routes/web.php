@@ -18,5 +18,5 @@ Route::get('/', function () {
  
 Route::get('/products', 'ProductsController@index');
 
-Route::get('/importView', 'ProductsController@importView');
+Route::get('/importproducts', 'ProductsController@importform');
 Route::post('/import', 'ProductsController@import')->name('import');
