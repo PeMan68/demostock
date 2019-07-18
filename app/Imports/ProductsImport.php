@@ -15,16 +15,14 @@ class ProductsImport implements ToModel
     * @return \Illuminate\Database\Eloquent\Model|null
 	*/
 	
-	SkipsOnError
+	//SkipsOnError
     public function model(array $row)
     {
         if($row->filter()->isNotEmpty()){
 			return new Product([
-				'item' 				=> $row[0],
-				'item_description'	=> $row[1],
-				'listprice' 		=> $row[2],
-				'created_at' 		=> date('Y-m-d H:i:s'),
-				'updated_at' 		=> date('Y-m-d H:i:s'),
+				'item' 				=> $row[2],
+				'item_description'	=> $row[3],
+				'listprice' 		=> $row[4],
 			]);
   		}
   }
