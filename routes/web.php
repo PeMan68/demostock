@@ -11,12 +11,18 @@
 |
 */
 
+
+
 Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
  
 Route::get('/products', 'ProductsController@index');
 
-Route::get('/importView', 'ProductsController@importView');
+Route::get('/importproducts', 'ProductsController@importform');
 Route::post('/import', 'ProductsController@import')->name('import');
