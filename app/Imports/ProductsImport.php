@@ -18,14 +18,16 @@ class ProductsImport implements ToModel
 	//SkipsOnError
     public function model(array $row)
     {
-        if($row->filter()->isNotEmpty()){
-			return new Product([
-				'item' 				=> $row[2],
-				'item_description'	=> $row[3],
-				'listprice' 		=> $row[4],
-			]);
-  		}
-  }
+		if (!isset($row[0])) {
+			return null;
+		}
+
+		return new Product([
+			'item' 				=> $row[0],
+			'item_description'	=> $row[1],
+			'listprice' 		=> $row[2],
+		]);
+	}
 }
 
  
