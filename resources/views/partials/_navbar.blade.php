@@ -17,8 +17,8 @@
           Produkter
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/products">Visa produktlista från Sigip</a>
           <a class="dropdown-item" href="./importproducts">Uppdatera produktlista från Sigip</a>
-          <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
