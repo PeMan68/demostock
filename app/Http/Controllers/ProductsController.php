@@ -11,7 +11,7 @@ class ProductsController extends Controller
 {
     public function index()
 	{
-		$products = Product::all();
+		$products = Product::paginate(50);
 		return view('products.index',['products' => $products]);
 	}
 	
@@ -27,7 +27,7 @@ class ProductsController extends Controller
     {
         Product::truncate(); // deletes all rows before inserting new data
 		Excel::import(new ProductsImport,request()->file('file'));
-        $products = Product::all();
+        $products = Product::all()->simplePaginate(50);
  		return view('products.index',['products' => $products])->with('success','All good!');
 	}
 }
