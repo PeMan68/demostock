@@ -1,8 +1,8 @@
 @extends('layouts.basic')
 
-@section('title','Imortera filer')
+@section('title','Importera filer')
 
-@section('header','Uppdatera prisfil från Excel-fil')
+@section('header','Uppdatera prisfil från Sigip (excel-fil)')
 
 @section('content')
 
