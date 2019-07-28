@@ -17,17 +17,13 @@ class ProductsController extends Controller
 	
 	public function importform()
     {
-       return view('import');
+       return view('products.import');
     }
       
-    /**
-    * @return \Illuminate\Support\Collection
-    */
     public function import() 
     {
         Product::truncate(); // deletes all rows before inserting new data
 		Excel::import(new ProductsImport,request()->file('file'));
-        $products = Product::all()->simplePaginate(50);
- 		return view('products.index',['products' => $products])->with('success','All good!');
+		return redirect('/products');
 	}
 }
