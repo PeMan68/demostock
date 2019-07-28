@@ -19,5 +19,5 @@ Route::get('/products', 'ProductsController@index');
 Route::get('/importproducts', 'ProductsController@importform');
 Route::post('/import', 'ProductsController@import')->name('import');
 
-Route::get('search', 'SearchController@index')->name('search');
-Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');
+Route::view('/search', 'search');
+Route::get('/user/find', 'SearchController@searchUsers');

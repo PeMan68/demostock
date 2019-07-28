@@ -22,13 +22,8 @@ class SearchController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function autocomplete(Request $request)
-    {
-        $data = Product::select("item")
-                ->where("item","LIKE","%{$request->input('query')}%")
-                ->get();
-   
-        return response()->json($data);
-    }
-
+	public function searchUsers(Request $request)
+	{
+		return Product::where('item', 'LIKE', '%'.$request->q.'%')->get();
+	}
 }

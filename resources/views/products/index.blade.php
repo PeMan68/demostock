@@ -12,7 +12,7 @@
 		<div class="col-sm-2">{{ $product->listprice}}</div>
 		<div class="col-sm-2">{{ $product->created_at}}</div>
 @endforeach
-{{ $products->links() }}
+	{{ $products->links() }}
 @endsection
 
 

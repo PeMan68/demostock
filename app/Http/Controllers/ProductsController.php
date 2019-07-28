@@ -11,7 +11,9 @@ class ProductsController extends Controller
 {
     public function index()
 	{
-		$products = Product::paginate(50);
+	//	$products = Product::paginate(50);
+		$products = Product::where('item', 'LIKE', "%"."G34"."%")->paginate(50);
+		//$filter = User::where('name','LIKE','%'.$variable.'%')->get();
 		return view('products.index',['products' => $products]);
 	}
 	
